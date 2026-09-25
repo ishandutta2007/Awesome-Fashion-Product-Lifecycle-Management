@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#311042" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 42px; fill: #ffffff; }
+    .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 20px; fill: #cbd5e1; }
+    .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 13px; fill: #e2e8f0; }
+    
+    /* Dynamic background movement */
+    @keyframes float1 {
+      0% { transform: translate(0px, 0px) rotate(0deg); }
+      50% { transform: translate(25px, -20px) rotate(5deg); }
+      100% { transform: translate(0px, 0px) rotate(0deg); }
+    }
+    @keyframes float2 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-30px, 15px) scale(1.05); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    @keyframes pulseGlow {
+      0% { opacity: 0.3; }
+      50% { opacity: 0.7; }
+      100% { opacity: 0.3; }
+    }
+
+    .bg-element-1 { animation: float1 12s ease-in-out infinite; transform-origin: center; }
+    .bg-element-2 { animation: float2 15s ease-in-out infinite; transform-origin: center; }
+    .glowing-orb { animation: pulseGlow 6s ease-in-out infinite; }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+  
+  <!-- Glowing Background Orbs (Dynamic) -->
+  <circle class="glowing-orb" cx="150" cy="80" r="180" fill="url(#glowGrad)" />
+  <circle class="glowing-orb" cx="1050" cy="280" r="220" fill="url(#glowGrad)" />
+
+  <!-- Background Decorative Dynamic Elements (Behind Text) -->
+  <g class="bg-element-1" opacity="0.15">
+    <path d="M 950 90 L 980 130 L 920 130 Z M 950 70 A 15 15 0 0 1 965 85 L 950 85" stroke="#ec4899" stroke-width="4" fill="none"/>
+    <path d="M 850 160 Q 950 110 1050 160 L 1070 190 Q 950 210 830 190 Z" fill="#ec4899" />
+  </g>
+
+  <g class="bg-element-2" opacity="0.2">
+    <path d="M 50 280 L 350 280 M 50 300 L 280 300 M 50 320 L 400 320" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="10 6" />
+    <rect x="800" y="40" width="120" height="80" rx="8" stroke="#3b82f6" stroke-width="2" fill="none" />
+    <rect x="940" y="40" width="180" height="80" rx="8" stroke="#ec4899" stroke-width="2" fill="none" />
+  </g>
+
+  <!-- Accent Top Border Strip -->
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accentGrad)" />
+
+  <!-- Foreground Content Area -->
+  <g transform="translate(60, 0)">
+    
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, 50)">
+      <rect width="320" height="32" rx="16" fill="#ffffff" fill-opacity="0.1" stroke="#ec4899" stroke-opacity="0.4" stroke-width="1.5" />
+      <text x="16" y="21" class="badge-text" fill="#f472b6">✨ CURATED FASHION TECH ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="135" class="title" filter="url(#shadow)">
+      Fashion Product Lifecycle Management
+    </text>
+    
+    <!-- Gradient Subtitle / Tagline -->
+    <text x="0" y="175" font-family="'Segoe UI', system-ui, sans-serif" font-weight="700" font-size="24" fill="url(#accentGrad)">
+      (PLM) SaaS Platforms &amp; Open-Source Ecosystem
+    </text>
+
+    <!-- Subtitle Description -->
+    <text x="0" y="220" class="subtitle">
+      Tech Packs • BOM • Seasonal Line Planning • Apparel Supply Chain &amp; Sourcing
+    </text>
+
+    <!-- Key Feature Pills -->
+    <g transform="translate(0, 260)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="170" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+        <text x="14" y="23" class="badge-text">👔 Apparel &amp; Footwear</text>
+      </g>
+
+      <!-- Pill 2 -->
+      <g transform="translate(182, 0)">
+        <rect width="170" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+        <text x="14" y="23" class="badge-text">☁️ Commercial SaaS</text>
+      </g>
+
+      <!-- Pill 3 -->
+      <g transform="translate(364, 0)">
+        <rect width="180" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+        <text x="14" y="23" class="badge-text">⚡ Open-Source PLM/ERP</text>
+      </g>
+    </g>
+  </g>
+</svg>
