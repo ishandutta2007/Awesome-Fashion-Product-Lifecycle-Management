@@ -55,7 +55,7 @@ The global **Fashion Product Lifecycle Management (PLM) software market** is est
 
 ## ⚡ Open-Source GitHub Projects
 
-> *Repositories are sorted in descending order by GitHub Star count.*
+> *Repositories are sorted in descending order by GitHub Stars_Count.*
 
 - **[Odoo](https://github.com/odoo/odoo/stargazers)** <a href="https://github.com/odoo/odoo/stargazers"><img src="https://img.shields.io/github/stars/odoo/odoo?style=social&color=white" alt="Odoo Stars"/></a> 📦  
   Comprehensive open-source ERP framework featuring extensible Product Lifecycle Management (PLM), BOM variants, fabric tracking, and apparel manufacturing modules.
